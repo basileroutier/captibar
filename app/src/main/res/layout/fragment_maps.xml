@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:map="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="mapViewModel"
+            type="com.example.mobg_54018.fragment.mapbar.MapsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+        android:id="@+id/localisateMe"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/localisation_layout_button"
+        android:gravity="center"
+        app:backgroundTint="@color/white"
+        app:icon="@drawable/localisation_google"
+        app:iconGravity="textStart"
+        app:iconSize="20dp"
+        app:iconPadding="0dp"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="@{()->mapViewModel.onLocalisateMeClicked()}" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

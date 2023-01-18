@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Mobile 54018</string>
+    <string name="defisDaysText">Seras-tu relever\n<b>le défis du jour ?</b></string>
+    <string name="conceptGameHome">Concept du jeu</string>
+    <string name="barDayText">Le bar du jour</string>
+    <string name="barDayInfo">Allez-y pour capturer encore plus de point</string>
+    <string name="barDayButton"><b>Y-aller 🍺</b></string>
+    <string name="allBarsText"><b>Les bars</b></string>
+
+    <string name="passwordLoginHint">Mot de passe</string>
+    <string name="emailLogin">Email</string>
+    <string name="connectTextLogin">Se connecter</string>
+    <string name="noAccountLogin">Nouveau à CaptiBar ?</string>
+    <string name="createAccountLogin"><b>Créer un nouveau compte</b></string>
+    <string name="createAccountTextRegister">Créer un compte</string>
+    <string name="confirmPswdRegister">Confirmer mot de passe</string>
+    <string name="returnToLoginPageImageText">Retourner à la page de connexion</string>
+    <string name="infoPurposeGame">Capturer le plus de bar possible dans un temps imparti.\n\nPlusieurs équipes s\'affrontent pour pouvoir avoir le droit à sa récompense !\n\nLe gagnant est celui qui a le plus de bar enregistré dans l\'application. \n\n Bonne bière à toutes et à tous !</string>
+    <string name="titlePurposeGame"><b>🍺 Le but du jeu</b></string>
+    <string name="barName"><b>Le nom du bar</b></string>
+    <string name="aboutDetailBar"><b>A propos</b></string>
+    <string name="descriptionDetailBar">Voici la descriptiton du bar qui est super cool. \nOu bien super chouette</string>
+    <string name="localisationimagecardviewdescription">localisationImageCardViewDescription</string>
+    <string name="seeMoreBars">Voir plus de bars</string>
+    <string name="captur">Capturé</string>
+    <string name="no_internet_connection">Connexion limitée ou indisponible</string>
+    <string name="numbersOfCaptureText"><b>Nombres de capture :</b></string>
+</resources>

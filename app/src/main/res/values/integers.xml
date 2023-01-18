@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="animLongTime">400</integer>
+    <integer name="animMidTime">300</integer>
+    <integer name="animTime">230</integer>
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="bar"
+            type="com.example.mobg_54018.dto.Bar" />
+        <variable
+            name="barDetailClickListener"
+            type="com.example.mobg_54018.fragment.recyclerview.BarDetailListener" />
+
+        <variable
+            name="barLocationClickListener"
+            type="com.example.mobg_54018.fragment.recyclerview.BarLocalisationListener" />
+    </data>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            app:strokeColor="@color/mainColorBluePurple90"
+            app:strokeWidth="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="@{() -> barDetailClickListener.onClick(bar)}">
+
+                <TextView
+                    android:id="@+id/barNameCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@{bar.name}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sub_title_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/adressBarCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@{bar.address}"
+                    android:textColor="@color/blackHighOpaMessage"
+                    android:textSize="@dimen/little_title_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/barNameCardView" />
+
+                <ImageView
+                    android:id="@+id/imageLocalisationCardView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="22dp"
+                    android:contentDescription="@string/localisationimagecardviewdescription"
+                    app:layout_constraintBottom_toBottomOf="@+id/adressBarCardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/barNameCardView"
+                    app:srcCompat="@drawable/localisationbar"
+                    android:onClick="@{() -> barLocationClickListener.onClick(bar)}"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+</layout>

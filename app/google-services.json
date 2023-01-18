@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "52609752597",
+    "project_id": "captibar",
+    "storage_bucket": "captibar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:52609752597:android:c47fa4b136878ddf85381c",
+        "android_client_info": {
+          "package_name": "com.example.mobg_54018"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "52609752597-jp40dkv8ld6gm8m6r96ks4s0qrd8mm6c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6AtsflNHMfDG2IRFW2rlj8Z5XP4QJk7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "52609752597-jp40dkv8ld6gm8m6r96ks4s0qrd8mm6c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

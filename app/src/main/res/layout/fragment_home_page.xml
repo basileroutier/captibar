@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="homePageViewModel"
+            type="com.example.mobg_54018.fragment.homepage.HomePageViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/defisDayText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="128dp"
+            android:autoSizeTextType="uniform"
+            android:text="@string/defisDaysText"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/infoIconUser"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="15dp"
+            android:onClick="@{()->homePageViewModel.onInfoIconUserClicked()}"
+            app:layout_constraintBottom_toBottomOf="@+id/defisDayText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/defisDayText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_outline_account_circle_24"
+            app:tint="@color/blueOpaChartColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/conceptGameHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="80dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+
+
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="35dp"
+
+
+            android:onClick="@{() -> homePageViewModel.conceptGameHome()}"
+            android:stateListAnimator="@null"
+
+
+            android:text="@string/conceptGameHome"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:backgroundTint="@color/Yellow80OpaChartColor"
+            app:cornerRadius="40dp"
+            app:layout_constraintEnd_toEndOf="@+id/defisDayText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/defisDayText"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/round_layout"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conceptGameHome">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:color="@color/white"
+                android:text="@string/barDayText"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/barDayInfo"
+                android:textColor="@color/white"
+                android:textSize="@dimen/little_title_size" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="10dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:stateListAnimator="@null"
+
+                android:text="@string/barDayButton"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:backgroundTint="@color/white"
+                android:onClick="@{ ()-> homePageViewModel.onBarOfDayClick()}"
+                app:cornerRadius="40dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/theBarsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="26dp"
+            android:text="@string/allBarsText"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sub_title_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/barListHomePage"
+            android:layout_width="342dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="31dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="5dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/loadMoreBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/theBarsText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loadMoreBar"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginEnd="64dp"
+
+
+            android:layout_marginBottom="8dp"
+            android:insetLeft="0dp"
+            android:insetTop="0dp"
+
+
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+
+
+            android:minWidth="0dp"
+            android:minHeight="30dp"
+            android:onClick="@{() -> homePageViewModel.loadMoreBar()}"
+            android:stateListAnimator="@null"
+            android:text="@string/seeMoreBars"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:backgroundTint="@color/Yellow80OpaChartColor"
+            app:cornerRadius="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/barListHomePage"
+            app:layout_constraintStart_toStartOf="@+id/barListHomePage"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

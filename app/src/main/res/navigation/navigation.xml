@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.mobg_54018.fragment.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment"
+            app:enterAnim="@anim/slide_in_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.mobg_54018.fragment.register.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register_login">
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.mobg_54018.fragment.homepage.HomePageFragment"
+        android:label="HomePageFragment"
+        tools:layout="@layout/fragment_home_page">
+        <action
+            android:id="@+id/action_homePageFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_out_top" />
+        <action
+            android:id="@+id/action_homePageFragment_to_detailBarFragment"
+            app:destination="@id/detailBarFragment"
+            app:enterAnim="@anim/slide_in_bottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.mobg_54018.fragment.mapbar.MapsFragment"
+        android:label="MapsFragment"
+        tools:layout="@layout/fragment_maps"/>
+    <fragment
+        android:id="@+id/detailBarFragment"
+        android:name="com.example.mobg_54018.fragment.detailbar.DetailBarFragment"
+        android:label="DetailBarFragment"
+        tools:layout="@layout/fragment_bar_detail">
+        <argument
+            android:name="bar"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailBarFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+
+
+</navigation>
