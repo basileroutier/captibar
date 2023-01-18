@@ -39,6 +39,10 @@ La navigation entre chaque page est marqué via une flèche :
 
 **Important !!! Lors de la création du fichier _local.properties_ ajouté la ligne suivante :**
 
+```
+MAPS_API_KEY=your-google-api-key
+```
+
 
 ## Problèmes pouvant survenir
 
